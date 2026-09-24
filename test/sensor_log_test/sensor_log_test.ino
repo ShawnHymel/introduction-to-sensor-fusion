@@ -43,13 +43,14 @@ sh2_SensorValue_t bno_val;
 // Define the sensor reports to receive from the BNO085
 bool bnoSetReports() {
   bool ok = true;
+
+  // Raw reports
   ok &= bno.enableReport(SH2_ACCELEROMETER, BNO_REPORT_INTERVAL_US);
-  // ok &= bno.enableReport(SH2_RAW_GYROSCOPE, BNO_REPORT_INTERVAL_US);
   ok &= bno.enableReport(SH2_GYROSCOPE_UNCALIBRATED, BNO_REPORT_INTERVAL_US);
-  // ok &= bno.enableReport(SH2_GYROSCOPE_CALIBRATED, BNO_REPORT_INTERVAL_US);
-  ok &= bno.enableReport(SH2_MAGNETIC_FIELD_UNCALIBRATED, BNO_REPORT_INTERVAL_US);
-  // ok &= bno.enableReport(SH2_MAGNETIC_FIELD_CALIBRATED, BNO_REPORT_INTERVAL_US);
-  ok &= bno.enableReport(SH2_ROTATION_VECTOR, BNO_REPORT_INTERVAL_US);
+  // ok &= bno.enableReport(SH2_MAGNETIC_FIELD_UNCALIBRATED, BNO_REPORT_INTERVAL_US);
+
+  // Reference reports (choose only one)
+  // ok &= bno.enableReport(SH2_ROTATION_VECTOR, BNO_REPORT_INTERVAL_US);
   // ok &= bno.enableReport(SH2_GAME_ROTATION_VECTOR, BNO_REPORT_INTERVAL_US);
 
   return ok;
@@ -59,7 +60,7 @@ bool bnoSetReports() {
  * TEST
  */
 
- #define PRINT_ROWS 0   // set to 0 to measure throughput with no serial output
+ #define PRINT_ROWS 1   // set to 0 to measure throughput with no serial output
 
 enum BnoStream { S_ACC, S_GYRO_RAW, S_GYRO_UC, S_GYRO_CAL, S_MAG_UC, S_MAG_CAL, S_RV, S_GRV, S_COUNT };
 const char* const STREAM_NAME[S_COUNT] =
@@ -120,8 +121,7 @@ void setup() {
   // lis.setDataRate(LIS3MDL_DATARATE_155_HZ);
   // lis.setRange(LIS3MDL_RANGE_4_GAUSS);
 
-  // Let lines settle before trying to initialize sensor
-  delay(1000);
+  `
 
   // Initialize BNO085. Keep trying if it fails.
   if (!bno.begin_I2C()) {
