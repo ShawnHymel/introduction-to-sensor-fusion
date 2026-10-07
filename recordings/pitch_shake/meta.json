@@ -1,0 +1,80 @@
+{
+  "name": "pitch_shake",
+  "folder": "pitch_shake-20260930-104909",
+  "reference": "BNO_GRV",
+  "requested_seconds": 30,
+  "started_utc": "2026-09-30T16:49:09.716097+00:00",
+  "port": "COM8",
+  "columns": {
+    "BNO_ACC": [
+      "t_us",
+      "tag",
+      "seq",
+      "bno_delay_us",
+      "status",
+      "ax",
+      "ay",
+      "az"
+    ],
+    "BNO_GYRO_UC": [
+      "t_us",
+      "tag",
+      "seq",
+      "bno_delay_us",
+      "status",
+      "gx",
+      "gy",
+      "gz",
+      "gbias_x",
+      "gbias_y",
+      "gbias_z"
+    ],
+    "BNO_MAG_UC": [
+      "t_us",
+      "tag",
+      "seq",
+      "bno_delay_us",
+      "status",
+      "mx",
+      "my",
+      "mz",
+      "mbias_x",
+      "mbias_y",
+      "mbias_z"
+    ],
+    "BNO_GRV": [
+      "t_us",
+      "tag",
+      "seq",
+      "bno_delay_us",
+      "status",
+      "qw",
+      "qx",
+      "qy",
+      "qz"
+    ]
+  },
+  "counts": {
+    "BNO_ACC": 3517,
+    "BNO_GYRO_UC": 2993,
+    "BNO_MAG_UC": 1778,
+    "BNO_GRV": 2993
+  },
+  "sequence_gaps": {
+    "BNO_ACC": 0,
+    "BNO_GYRO_UC": 0,
+    "BNO_MAG_UC": 0,
+    "BNO_GRV": 0
+  },
+  "malformed_lines": 0,
+  "sketch_end": {
+    "duration_s": 30.001,
+    "acc": 3517,
+    "gyro": 2993,
+    "mag": 1778,
+    "ref": 2993,
+    "ok": 1
+  },
+  "warnings": [],
+  "clean": true
+}

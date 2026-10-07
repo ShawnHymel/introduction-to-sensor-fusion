@@ -1,9 +1,9 @@
 {
-  "name": "static",
-  "folder": "static-20260924-174625",
-  "reference": "BNO_RV",
-  "requested_seconds": 5,
-  "started_utc": "2026-09-24T23:46:25.831674+00:00",
+  "name": "pitch_fast",
+  "folder": "pitch_fast-20260930-105003",
+  "reference": "BNO_GRV",
+  "requested_seconds": 30,
+  "started_utc": "2026-09-30T16:50:03.670966+00:00",
   "port": "COM8",
   "columns": {
     "BNO_ACC": [
@@ -42,7 +42,7 @@
       "mbias_y",
       "mbias_z"
     ],
-    "BNO_RV": [
+    "BNO_GRV": [
       "t_us",
       "tag",
       "seq",
@@ -51,29 +51,28 @@
       "qw",
       "qx",
       "qy",
-      "qz",
-      "heading_accuracy"
+      "qz"
     ]
   },
   "counts": {
-    "BNO_ACC": 592,
-    "BNO_GYRO_UC": 499,
-    "BNO_MAG_UC": 345,
-    "BNO_RV": 499
+    "BNO_ACC": 3530,
+    "BNO_GYRO_UC": 2993,
+    "BNO_MAG_UC": 1818,
+    "BNO_GRV": 2993
   },
   "sequence_gaps": {
     "BNO_ACC": 0,
     "BNO_GYRO_UC": 0,
     "BNO_MAG_UC": 0,
-    "BNO_RV": 0
+    "BNO_GRV": 0
   },
   "malformed_lines": 0,
   "sketch_end": {
-    "duration_s": 5.002,
-    "acc": 592,
-    "gyro": 499,
-    "mag": 345,
-    "ref": 499,
+    "duration_s": 30.0,
+    "acc": 3530,
+    "gyro": 2993,
+    "mag": 1818,
+    "ref": 2993,
     "ok": 1
   },
   "warnings": [],

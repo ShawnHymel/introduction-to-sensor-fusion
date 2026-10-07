@@ -6,8 +6,8 @@ Records a sensor sequence from the BNO085 logger sketch and writes one CSV
 per stream, plus a meta.json describing the recording.
 
 Usage:
-    python log_sensor.py --port COM5 --name yaw_slow --ref G --seconds 60
-    python log_sensor.py -p /dev/ttyACM0 -n static_long --ref N --seconds 0
+    python sensor_logger.py --port COM5 --name yaw_slow --ref G --seconds 60
+    python sensor_logger.py -p /dev/ttyACM0 -o recordings -r N --seconds 0 -n static_long
 """
 
 import argparse

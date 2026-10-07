@@ -2,6 +2,8 @@
 
 This repository holds the code required to run all the demos from the Introduction to Sensor Fusion video series.
 
+> Python version 3.12+ is recommended. These demos were tested on Python 3.12.6.
+
 ## Installation
 
 ### Arduino and Libraries
@@ -23,4 +25,26 @@ Next, go to the *Library manager*. Search for and install the following librarie
  * Adafruit LIS3MDL
 
 If asked, install any of the dependencies required for each of the libraries.
+
+### Python
+
+Download this repository somewhere on your computer. Navigate to this folder and create a virtual environment:
+
+```sh
+python -m venv venv
+```
+
+Activate the virtual environment with `venv\Scripts\activate` on Windows or `source myenv/bin/activate` on macOS or Linux.
+
+Install the required libraries:
+
+```sh
+python -m pip install -r requirements.txt
+```
+
+Run JupyterLab:
+
+```sh
+jupyter lab
+```
 

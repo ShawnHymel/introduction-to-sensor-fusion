@@ -329,7 +329,7 @@ void serviceBno() {
 
       // Accelerometer report
       case SH2_ACCELEROMETER: {
-        auto& a = bno_val.un.accelerometer;
+        auto &a = bno_val.un.accelerometer;
         Serial.printf("%llu,BNO_ACC,%lu,%ld,%u,%.5f,%.5f,%.5f\n",
                       (unsigned long long)t, (unsigned long)seq_count[S_ACC],
                       delay, st, a.x, a.y, a.z);
@@ -339,7 +339,7 @@ void serviceBno() {
 
       // Gyroscope report
       case SH2_GYROSCOPE_UNCALIBRATED: {
-        auto& g = bno_val.un.gyroscopeUncal;
+        auto &g = bno_val.un.gyroscopeUncal;
         Serial.printf("%llu,BNO_GYRO_UC,%lu,%ld,%u,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f\n",
                       (unsigned long long)t, (unsigned long)seq_count[S_GYRO],
                       delay, st, g.x, g.y, g.z, g.biasX, g.biasY, g.biasZ);
@@ -349,7 +349,7 @@ void serviceBno() {
 
       // Magnetometer report
       case SH2_MAGNETIC_FIELD_UNCALIBRATED: {
-        auto& m = bno_val.un.magneticFieldUncal;
+        auto &m = bno_val.un.magneticFieldUncal;
         Serial.printf("%llu,BNO_MAG_UC,%lu,%ld,%u,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f\n",
                       (unsigned long long)t, (unsigned long)seq_count[S_MAG],
                       delay, st, m.x, m.y, m.z, m.biasX, m.biasY, m.biasZ);
@@ -359,7 +359,7 @@ void serviceBno() {
 
       // Rotation vector reference report
       case SH2_ROTATION_VECTOR: {
-        auto& q = bno_val.un.rotationVector;
+        auto &q = bno_val.un.rotationVector;
         Serial.printf("%llu,BNO_RV,%lu,%ld,%u,%.6f,%.6f,%.6f,%.6f,%.4f\n",
                       (unsigned long long)t, (unsigned long)seq_count[S_REF],
                       delay, st, q.real, q.i, q.j, q.k, q.accuracy);
@@ -369,7 +369,7 @@ void serviceBno() {
 
       // Rotation game rotation vector report
       case SH2_GAME_ROTATION_VECTOR: {
-        auto& q = bno_val.un.gameRotationVector;
+        auto &q = bno_val.un.gameRotationVector;
         Serial.printf("%llu,BNO_GRV,%lu,%ld,%u,%.6f,%.6f,%.6f,%.6f\n",
                       (unsigned long long)t, (unsigned long)seq_count[S_REF],
                       delay, st, q.real, q.i, q.j, q.k);
@@ -424,6 +424,9 @@ void setup() {
 
   // Set I2C speed
   Wire.setClock(I2C_CLOCK_HZ);
+
+  // Disable dynamic calibration
+  sh2_setCalConfig(0);
 
   // Disable BNO085 reporting (for now)
   bnoDisableReports();

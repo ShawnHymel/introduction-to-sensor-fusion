@@ -1,0 +1,12 @@
+# Tested on Python 3.12
+
+# Serial capture (log_sensor.py)
+pyserial==3.5
+
+# Analysis and filters
+numpy==2.5.3
+matplotlib==3.11.0
+
+# Notebooks
+jupyterlab==4.6.3
+ipykernel==6.30.1
