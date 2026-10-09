@@ -21,8 +21,6 @@ Click OK and let the boards manager update. In the Arduino *Boards manager*, sea
 Next, go to the *Library manager*. Search for and install the following libraries:
 
  * Adafruit BNO08x
- * Adafruit LSM6DS
- * Adafruit LIS3MDL
 
 If asked, install any of the dependencies required for each of the libraries.
 
@@ -48,3 +46,12 @@ Run JupyterLab:
 jupyter lab
 ```
 
+## 3D Web Viewer
+
+This repository comes with a modified version of the [Adafruit WebSerial 3D Model Viewer]() used to show the orientation of a connected board that outputs quaternion or Euler angle information. To use the viewer, head to the following link:
+
+[https://shawnhymel.github.io/introduction-to-sensor-fusion/](https://shawnhymel.github.io/introduction-to-sensor-fusion/)
+
+## License
+
+TODO
