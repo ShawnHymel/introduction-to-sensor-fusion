@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+
+# Virtual environment
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# FreeCAD
+*.FCBak
+
+# Others
+.Trash-*/
