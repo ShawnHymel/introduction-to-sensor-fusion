@@ -1,5 +1,7 @@
 /**
- * PIR + mmWave simple rule-based fusion demo
+ * Solution: PIR + mmWave simple rule-based fusion
+ *
+ * Look for all the TODO tags and write the required code.
  */
 
 #include "DFRobot_C4001.h"
@@ -9,7 +11,7 @@
  */
 
 #define FUSION_INTERVAL_MS  100   // Time between checking sensors for presence
-#define TIMEOUT_MS          5000  // No detection in this time means empty room
+#define TIMEOUT_MS          20000 // No detection in this time means empty room
 #define LED_PIN             LED_BUILTIN
 
 // PIR settings
@@ -20,7 +22,7 @@
 #define MMWAVE_MIN_CM       30              // Min detection distance
 #define MMWAVE_MAX_CM       240             // Max detection distance
 #define MMWAVE_TRIG_CM      240             // Trigger dist (240 to 2000 cm)
-#define MMWAVE_TRIG_SENS    0               // 0 (min) to 9 (max)
+#define MMWAVE_TRIG_SENS    4               // 0 (min) to 9 (max)
 #define MMWAVE_KEEP_SENS    0               // 0 (min) to 9 (max)
 #define MMWAVE_TRIG_DELAY   0               // 0.01 s units
 #define MMWAVE_KEEP_DELAY   4               // 0.5 s units (4 = 2 s, minimum)
@@ -141,8 +143,8 @@ void loop() {
     // Read from PIR sensor
     int pir_det = digitalRead(PIR_PIN);
 
-    // Simple rule-based fusion: only PIR can trigger the flag, but the mmWave
-    // detection can keep it high
+    // TODO: write the rule-based fusion where the PIR can trigger the flag and
+    // the mmWave detection can keep it high (fused_det=true)
     if (pir_det) {
       fused_det = true;
       prev_evidence_ms = timestamp;
@@ -150,7 +152,8 @@ void loop() {
       prev_evidence_ms = timestamp;
     }
 
-    // If neither sensor detects presence, consider room to be empty
+    // TODO: write the timeout logic such that if neither sensor detects
+    // presence after TIMEOUT_MS, the consider the room empty (fused_det=false)
     if (fused_det && (timestamp - prev_evidence_ms > TIMEOUT_MS)) {
       fused_det = false;
     }

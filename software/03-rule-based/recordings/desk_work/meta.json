@@ -1,10 +1,10 @@
 {
-  "name": "desk_work_test",
-  "folder": "desk_work_test-20261018-140403",
+  "name": "desk_work",
+  "folder": "desk_work",
   "notes": "",
   "requested_seconds": 900,
-  "requested_delay_s": 1,
-  "started_utc": "2026-10-18T20:04:03.235842+00:00",
+  "requested_delay_s": 30,
+  "started_utc": "2026-10-18T19:43:48.547312+00:00",
   "port": "COM8",
   "columns": [
     "t_us",
@@ -16,9 +16,9 @@
     "sens_raw"
   ],
   "config": {
-    "uptime_s": 7614.0,
+    "uptime_s": 6428.3,
     "sample_interval_us": 100000,
-    "start_delay_s": 1.0,
+    "start_delay_s": 30.0,
     "mmwave_link": "uart",
     "mmwave_timeout_ms": 3000,
     "mmwave_min_cm": 30,
@@ -35,13 +35,13 @@
     "rb_mmwave_keep_sens": 4,
     "rb_mmwave_trig_delay": 0,
     "rb_mmwave_keep_delay": 4,
-    "truth_initial": 1
+    "truth_initial": 0
   },
   "rows": 9001,
   "sequence_gaps": 0,
   "malformed_lines": 0,
   "mmwave_missing": 0,
-  "truth_present_fraction": 0.6492611932007555,
+  "truth_present_fraction": 0.5407176980335519,
   "truth_changes": 2,
   "sketch_end": {
     "duration_s": 900.0,
