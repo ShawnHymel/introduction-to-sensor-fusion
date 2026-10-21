@@ -1,7 +1,7 @@
 """
 utils.py
 
-Utility functions for the Bayes Filter notebook
+Utility functions for the PIR and mmWave fusion notebook
 """
 
 import json

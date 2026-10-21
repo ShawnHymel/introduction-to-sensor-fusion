@@ -1,0 +1,77 @@
+{
+  "name": "static_cal",
+  "folder": "static_cal",
+  "notes": "",
+  "requested_seconds": 300,
+  "requested_delay_s": 300,
+  "started_utc": "2026-10-20T23:49:34.522856+00:00",
+  "port": "COM8",
+  "columns": [
+    "t_us",
+    "tag",
+    "seq",
+    "ntc_raw",
+    "tmp36_raw",
+    "mcp9700_raw",
+    "tmp117_raw",
+    "ntc_c",
+    "tmp36_c",
+    "mcp9700_c",
+    "tmp117_c"
+  ],
+  "config": {
+    "uptime_s": 1763.0,
+    "sample_interval_us": 1000000,
+    "start_delay_s": 300.0,
+    "adc_bits": 12,
+    "vref": 3.3,
+    "ntc_r_fixed": 10000.0,
+    "ntc_r_nominal": 10000.0,
+    "ntc_t_nominal_c": 25.0,
+    "ntc_beta": 3977.0,
+    "lin_offset_v": 0.5,
+    "lin_slope_v_per_c": 0.01,
+    "tmp117_lsb_c": 0.0078125,
+    "tmp117_mode": "default_1s_8avg",
+    "tmp117_ok": 1
+  },
+  "rows": 301,
+  "sequence_gaps": 0,
+  "malformed_lines": 0,
+  "summary": {
+    "ntc_c": {
+      "mean": 23.740843853820596,
+      "std": 0.05163421543671643,
+      "missing": 0,
+      "err_mean": 0.19687209302325553,
+      "err_std": 0.04498741844788004
+    },
+    "tmp36_c": {
+      "mean": 24.423677740863788,
+      "std": 0.1140790623626705,
+      "missing": 0,
+      "err_mean": 0.8797059800664453,
+      "err_std": 0.10545326688848021
+    },
+    "mcp9700_c": {
+      "mean": 24.209445182724252,
+      "std": 0.0949317359213969,
+      "missing": 0,
+      "err_mean": 0.6654734219269094,
+      "err_std": 0.09095582824234733
+    },
+    "tmp117_c": {
+      "mean": 23.54397176079734,
+      "std": 0.03551696448960587,
+      "missing": 0
+    }
+  },
+  "sketch_end": {
+    "duration_s": 300.001,
+    "temp": 301,
+    "late": 0,
+    "i2c_err": 0
+  },
+  "warnings": [],
+  "clean": true
+}
