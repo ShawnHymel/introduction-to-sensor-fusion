@@ -1,0 +1,61 @@
+{
+  "name": "stairs_down",
+  "folder": "stairs_down-20261025-110427",
+  "notes": "smooth down stairs, 16 stairs (~309 cm)",
+  "requested_seconds": 20,
+  "started_utc": "2026-10-25T17:04:27.897017+00:00",
+  "port": "COM8",
+  "columns": [
+    "t_us",
+    "tag",
+    "seq",
+    "az",
+    "acc_status",
+    "baro_new",
+    "baro_age_us",
+    "press_pa",
+    "temp_c",
+    "alt_m"
+  ],
+  "config": {
+    "acc_interval_us": 10000,
+    "settle_time_us": 500000,
+    "bno_dynamic_cal": 0,
+    "bmp_addr": "0x47",
+    "bmp_odr_hz": 50.0,
+    "bmp_osr_p": 16,
+    "bmp_osr_t": 1,
+    "bmp_iir": "bypass",
+    "sea_level_pa": 101325.0
+  },
+  "rows": 2490,
+  "baro_rows": 998,
+  "sequence_gaps": 0,
+  "malformed_lines": 0,
+  "summary": {
+    "az": {
+      "mean": 9.77035791566265,
+      "std": 0.4332686224457241
+    },
+    "alt": {
+      "mean": 1720.1693429859718,
+      "std": 1.0542817518684784,
+      "range": 2.945299999999861
+    },
+    "acc_status_counts": {
+      "2": 2490
+    },
+    "max_baro_age_us": 12689
+  },
+  "sketch_end": {
+    "duration_s": 20.001,
+    "acc": 2490,
+    "baro": 998,
+    "baro_gaps": 0,
+    "baro_dropped": 0,
+    "baro_err": 0,
+    "ok": 1
+  },
+  "warnings": [],
+  "clean": true
+}

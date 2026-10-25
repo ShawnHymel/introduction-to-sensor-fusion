@@ -1,0 +1,61 @@
+{
+  "name": "lift",
+  "folder": "lift-20261025-110223",
+  "notes": "ground to waist (~1 m) a few times",
+  "requested_seconds": 60,
+  "started_utc": "2026-10-25T17:02:23.607165+00:00",
+  "port": "COM8",
+  "columns": [
+    "t_us",
+    "tag",
+    "seq",
+    "az",
+    "acc_status",
+    "baro_new",
+    "baro_age_us",
+    "press_pa",
+    "temp_c",
+    "alt_m"
+  ],
+  "config": {
+    "acc_interval_us": 10000,
+    "settle_time_us": 500000,
+    "bno_dynamic_cal": 0,
+    "bmp_addr": "0x47",
+    "bmp_odr_hz": 50.0,
+    "bmp_osr_p": 16,
+    "bmp_osr_t": 1,
+    "bmp_iir": "bypass",
+    "sea_level_pa": 101325.0
+  },
+  "rows": 7470,
+  "baro_rows": 2996,
+  "sequence_gaps": 0,
+  "malformed_lines": 0,
+  "summary": {
+    "az": {
+      "mean": 9.745643388219545,
+      "std": 0.2926461783503849
+    },
+    "alt": {
+      "mean": 1717.3496793724967,
+      "std": 0.3742424038460488,
+      "range": 1.2925000000000182
+    },
+    "acc_status_counts": {
+      "2": 7470
+    },
+    "max_baro_age_us": 12504
+  },
+  "sketch_end": {
+    "duration_s": 60.0,
+    "acc": 7470,
+    "baro": 2996,
+    "baro_gaps": 0,
+    "baro_dropped": 0,
+    "baro_err": 0,
+    "ok": 1
+  },
+  "warnings": [],
+  "clean": true
+}

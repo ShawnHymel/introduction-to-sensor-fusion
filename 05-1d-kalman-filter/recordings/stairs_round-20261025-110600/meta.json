@@ -1,0 +1,61 @@
+{
+  "name": "stairs_round",
+  "folder": "stairs_round-20261025-110600",
+  "notes": "smooth stairs up then down, 16 stairs (~309 cm)",
+  "requested_seconds": 40,
+  "started_utc": "2026-10-25T17:06:00.565936+00:00",
+  "port": "COM8",
+  "columns": [
+    "t_us",
+    "tag",
+    "seq",
+    "az",
+    "acc_status",
+    "baro_new",
+    "baro_age_us",
+    "press_pa",
+    "temp_c",
+    "alt_m"
+  ],
+  "config": {
+    "acc_interval_us": 10000,
+    "settle_time_us": 500000,
+    "bno_dynamic_cal": 0,
+    "bmp_addr": "0x47",
+    "bmp_odr_hz": 50.0,
+    "bmp_osr_p": 16,
+    "bmp_osr_t": 1,
+    "bmp_iir": "bypass",
+    "sea_level_pa": 101325.0
+  },
+  "rows": 4979,
+  "baro_rows": 1997,
+  "sequence_gaps": 0,
+  "malformed_lines": 0,
+  "summary": {
+    "az": {
+      "mean": 9.75135264912633,
+      "std": 0.380959679343059
+    },
+    "alt": {
+      "mean": 1720.3197958437656,
+      "std": 1.0928993537020666,
+      "range": 3.074700000000121
+    },
+    "acc_status_counts": {
+      "2": 4979
+    },
+    "max_baro_age_us": 14461
+  },
+  "sketch_end": {
+    "duration_s": 40.0,
+    "acc": 4979,
+    "baro": 1997,
+    "baro_gaps": 0,
+    "baro_dropped": 0,
+    "baro_err": 0,
+    "ok": 1
+  },
+  "warnings": [],
+  "clean": true
+}

@@ -13,6 +13,7 @@ https://github.com/earlephilhower/arduino-pico/releases/download/global/package_
 
 Install the following Arduino libraries (accept any pop-ups asking to install additional dependencies):
 
+ * Adafruit BMP5xx
  * Adafruit BNO08x
  * Adafruit TMP117
  * DFRobot C4001
