@@ -38,11 +38,12 @@ def load_recording(path):
 
 def baro_samples(rec):
     """
-    Return (t, alt) for the rows that carry a new barometer sample, so each
-    barometer reading appears exactly once.
+    Return (t, alt) for the rows that carry a new barometer sample. The time
+    is when the barometer was actually read (row time minus baro_age_us).
     """
     new = rec["baro_new"]
-    return rec["t"][new], rec["alt_m"][new]
+    t = rec["t"][new] - rec["baro_age_us"][new] * 1e-6
+    return t, rec["alt_m"][new]
 
 
 def still_windows(motion, t_start, t_end, margin=0.5):
