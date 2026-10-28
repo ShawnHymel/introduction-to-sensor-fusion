@@ -127,3 +127,24 @@ def plot_histograms(rows, title, xlabel, bins=60):
     fig.suptitle(title)
     fig.tight_layout()
     plt.show()
+
+def sorted_streams(*streams):
+    """
+    Interleave several streams into one list of events, in time order.
+
+    streams: (name, t, values) tuples, e.g. ("acc", t_acc, az_rel)
+    Returns a list of (t, name, value) tuples:
+
+        [(0.0080, "acc",  0.012),
+         (0.0110, "baro", 0.003),
+         (0.0160, "acc", -0.008),
+         ...]
+    """
+    events = []
+    for name, t, values in streams:
+        events.extend((ti, name, vi) for ti, vi in zip(t, values))
+
+    # Sort on the timestamp alone
+    events.sort(key=lambda e: e[0])
+
+    return events
