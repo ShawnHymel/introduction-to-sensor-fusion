@@ -1,0 +1,133 @@
+{
+  "name": "drive_1",
+  "folder": "drive_1-20261030-102731",
+  "notes": "",
+  "requested_seconds": 300,
+  "started_utc": "2026-10-30T16:27:31.800376+00:00",
+  "port": "COM8",
+  "columns": {
+    "IMU": [
+      "t_us",
+      "tag",
+      "seq",
+      "ax",
+      "ay",
+      "az",
+      "acc_status",
+      "qi",
+      "qj",
+      "qk",
+      "qr",
+      "rv_acc_rad",
+      "rv_status",
+      "rv_age_us"
+    ],
+    "GPS": [
+      "t_us",
+      "tag",
+      "seq",
+      "utc",
+      "date",
+      "fix",
+      "sats",
+      "hdop",
+      "lat_deg",
+      "lon_deg",
+      "alt_m",
+      "rmc_valid",
+      "speed_mps",
+      "course_deg",
+      "pps_t_us"
+    ]
+  },
+  "config": {
+    "acc_interval_us": 10000,
+    "rv_interval_us": 10000,
+    "rv_report": "rotation_vector",
+    "bno_dynamic_cal": "gyro+mag",
+    "settle_time_us": 500000,
+    "gps_link": "i2c",
+    "gps_poll_us": 20000,
+    "gps_rate_ms": 1000,
+    "gps_pps_pin": 5,
+    "gps_sbas": 1,
+    "gps_static_nav": 0
+  },
+  "gps_wait": {
+    "min_sats": 6,
+    "max_hdop": 2.0,
+    "fix_settle_s": 30.0,
+    "status_at_start": {
+      "fix": 1,
+      "sats": 14,
+      "hdop": 0.71,
+      "pps": 3624,
+      "ready": 1
+    }
+  },
+  "rows": {
+    "IMU": 37327,
+    "GPS": 300
+  },
+  "gps_fix_rows": 300,
+  "sequence_gaps": {
+    "IMU": 0,
+    "GPS": 0
+  },
+  "malformed_lines": 0,
+  "summary": {
+    "accel": {
+      "ax": {
+        "mean": 0.9388259766388941,
+        "std": 1.2894047240246622
+      },
+      "ay": {
+        "mean": 0.37241958126825087,
+        "std": 1.171193552213445
+      },
+      "az": {
+        "mean": 9.692775820451683,
+        "std": 0.4971535535931247
+      }
+    },
+    "gps": {
+      "origin_lat_deg": 39.53019833,
+      "origin_lon_deg": -104.95277167,
+      "east": {
+        "mean": -284.99975613011287,
+        "std": 269.28196830218513,
+        "range": 836.7656675898719
+      },
+      "north": {
+        "mean": 628.8083109296157,
+        "std": 387.1348235634469,
+        "range": 1125.1080740645073
+      },
+      "sats_median": 14.0,
+      "hdop_median": 0.71
+    },
+    "rv_heading_acc_rad_mean": 2.5018724435395288,
+    "acc_status_counts": {
+      "2": 37327
+    },
+    "rv_status_counts": {
+      "0": 37327
+    },
+    "fix_counts": {
+      "1": 300
+    },
+    "max_rv_age_us": 14292
+  },
+  "sketch_end": {
+    "duration_s": 300.002,
+    "imu": 37327,
+    "gps": 300,
+    "gps_fix": 300,
+    "pps": 0,
+    "gps_cksum_err": 1,
+    "gps_overflow": 0,
+    "ok": 1
+  },
+  "warnings": [],
+  "clean": false
+}
