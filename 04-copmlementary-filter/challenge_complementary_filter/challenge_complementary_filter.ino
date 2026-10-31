@@ -43,6 +43,7 @@ bool bnoEnableReports() {
 void predict(int64_t t, float gyro_rate) {
   // If previous timestamp exists, integrate the gyro reading
   if (have_t_prev) {
+    float dt = (t - t_prev) * 1e-6f;
     // YOUR CODE HERE
   }
 
@@ -56,6 +57,7 @@ void correct(float measured_pitch_deg) {
   if (!initialized) {
     // The first accelerometer reading should set the initial pitch
     // YOUR CODE HERE
+    initialized = true;
   } else {
     // Complementary filter: blend acc and integrated gyro readings
     // YOUR CODE HERE
