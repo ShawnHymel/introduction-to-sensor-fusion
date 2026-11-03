@@ -1,5 +1,8 @@
 # Introduction to Sensor Fusion
 
+Welcome to the Introduction to Sensor Fusion demo repository!
+
+> **VIDEOS COMING SOON**
 
 ## Installation
 
@@ -39,3 +42,7 @@ Run JupyterLab:
 ```sh
 jupyter lab
 ```
+
+## License
+
+All software in this repository, unless otherwise noted, is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
